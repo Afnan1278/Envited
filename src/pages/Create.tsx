@@ -1,17 +1,13 @@
-import { Button, Grid, Icon, LinearProgress, Paper } from '@mui/material';
+import { Button, Grid, Icon, TextField} from '@mui/material';
 import React,{useState,useEffect} from 'react';
-import img from '../assets/images/landing.png'
-import img2 from '../assets/images/iconParty.png'
+import cake from '../assets/images/cake.jpeg'
+import picker from '../assets/images/picker.jpeg'
 import { useHistory } from 'react-router-dom'
-
-
-
-
-
-const CreatePage:React.FC = ()=>{
-    const history = useHistory()  
-
-
+const Create = ()=>{
+    const history = useHistory() 
+    const [date,setDate] = useState('set date')
+    const [time,setTime] = useState('set time')
+    const [dateTime,setDateTime] = useState('set date time')
     useEffect(()=>{
         let mounted  = true
         if (mounted){
@@ -25,46 +21,62 @@ const CreatePage:React.FC = ()=>{
 
     return (
         <>
-        <div className="page-content">
-            <Grid  container spacing={3}direction="row-reverse">
-                <Grid item xs={12} md={6}>
-                    <Grid container textAlign="center" justifyContent="center" alignItems="center">
-                        <Grid item xs={12} className='landing-heading'>
-                               <div >Imagine if</div> 
-                               <div className='heading-part'>Sanpchat</div>
-                               <div> had events</div>
-                        </Grid>
-                        <Grid  item  xs={12}className='sub-heading'>
-                            <div>
-                            Easily host and share events with your friends
-                            </div>
-                            <div>
-                            across any social media.
-                            </div>
-                            
-                        </Grid>
+        
+            <Grid  container direction="row-reverse">
+                <Grid item container  xs ={12}>
+                  <img src={cake}/>
+                </Grid>
+                
+                <Grid container justify-content='left' align-items='left' direction="column">
+                    <Grid item md={4}>
+                   
+                    <div className='create-heading'>
+                    Birthday Bash 
+                    </div>
                     </Grid>
+                    <Grid item md={4}>
                     
-                </Grid>
-                <Grid item xs={12} md={6}>
-                <Grid container textAlign='center' justifyContent="center" alignItems="center">
-                    <img src={img} alt="" width={300} />
+                      <div className='secondary-text'>
+                          Hosted by 
+                      
+                      </div>
                     </Grid>
-                    <Grid  container textAlign='center' justifyContent="center" alignItems="center">
-                        <Button sx={{textTransform: "none"}} variant="contained" onClick={() => history.push('/event')}>
-                            <Icon>
-                                <img src={img2} alt="" />
-                            </Icon>
-                            {`Create my event`}
-                        </Button>
-                    </Grid>
-                </Grid>
 
-            </Grid>
-        </div>
+                    <Grid item container direction ='row' >
+                    
+                  
+                    
+                    <Grid item container direction ="column">
+                      <Grid item md={4}>
+                      <div className='create-heading'>
+                        {date}
+                        
+                      </div>
+                      </Grid>
+                      <Grid item md={4}>
+                        <div className='secondary-text'>
+                          {time}
+                        </div>
+                      </Grid>
+                    </Grid>
+                    </Grid>
+
+                  <Grid item  md = {12}>
+                    
+                    </Grid>  
+                </Grid>
+               
+                <Grid item xs={12} md={6}>
+                
+                </Grid>
+                <Grid  container textAlign='center' justifyContent="center" alignItems="center">
+                <Button sx={{textTransform: "none"}} variant="contained" onClick={() => history.push('/event')}>
+                            
+                            {`Go Next`}
+                        </Button>
+                        </Grid>
+                </Grid> 
         </>
     )
 }
-
-
-export default CreatePage;
+export default Create 

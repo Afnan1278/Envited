@@ -1,6 +1,6 @@
 import { Button, Grid, Icon, LinearProgress, Paper } from '@mui/material';
 import React,{useState,useEffect} from 'react';
-import img from '../assets/images/landing.png'
+import img from '../assets/images/logo.jpg'
 import img2 from '../assets/images/iconParty.png'
 import { useHistory } from 'react-router-dom'
 
@@ -25,7 +25,7 @@ const EventPage:React.FC = (props:any)=>{
 
     return (
         <>
-        <div className="page-content">
+        <div className="page-content event">
             <Grid  container spacing={3}direction="row-reverse">
                 <Grid item xs={12} md={6}>
                     <Grid container textAlign="center" justifyContent="center" alignItems="center">
@@ -33,7 +33,7 @@ const EventPage:React.FC = (props:any)=>{
                         
                         <Paper elevation={1} className="section mt-10 card-event">
                             <h2 style={{ textAlign: 'center', paddingBottom: '10px' }}>
-                                Congratulations you event has been scheduled at</h2>
+                                Congratulations!!! you event has been scheduled at</h2>
                                 <div className='bounce'>
                                 <h2 style={{ textAlign: 'center', paddingBottom: '10px' }}>
                                 12/02/2022
@@ -48,7 +48,7 @@ const EventPage:React.FC = (props:any)=>{
                 </Grid>
                 <Grid item xs={12} md={6}>
                 <Grid container textAlign='center' justifyContent="center" alignItems="center">
-                    <img src={img} alt="" width={300} />
+                    <img style={{zoom:1.8,borderRadius:20, marginBottom:10}} src={img} alt=""  />
                     </Grid>
                     <Grid  container textAlign='center' justifyContent="center" alignItems="center">
                         <Button sx={{textTransform: "none"}} variant="contained" onClick={() => history.push('/')}>

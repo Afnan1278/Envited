@@ -4,7 +4,7 @@ body {
   color: #0000008a;
   font-family: "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 13px;
-  background-color: #F6F2FF !important;
+  background-color: #EDE5FF !important;
 }
 
 body, html, .app, #root, .site-wrapper {
@@ -46,6 +46,26 @@ ul {
   height: 48px;
   padding: 0 30px;
   box-shadow: 0 3px 5px 2px rgba(255, 105, 135, .3);
+}
+
+.create-heading {
+  font-family: Helvetica;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #240D57;
+
+}
+
+.secondary-text {
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: left;
 }
 
 ul li {
@@ -98,6 +118,7 @@ ul li {
   color: #333;
   /* border: 1px solid #4a4a4a; */
 }
+
 
 .bounce h2 {
   position: absolute;

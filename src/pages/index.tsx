@@ -48,7 +48,7 @@ const Home:React.FC = ()=>{
                 </Grid>
                 <Grid item xs={12} md={6}>
                 <Grid container textAlign='center' justifyContent="center" alignItems="center">
-                    <img src={img} alt="" width={300} />
+                    <img style={{zoom:1.7}}src={img} alt=""  />
                     </Grid>
                     <Grid  container textAlign='center' justifyContent="center" alignItems="center">
                         <Button sx={{textTransform: "none"}} variant="contained" onClick={() => history.push('/create')}>
